@@ -4,6 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = (env, argv) => {
 
@@ -81,11 +82,9 @@ module.exports = (env, argv) => {
             ],
         },
         optimization: {
+            minimize: true,
             minimizer: [
-                new UglifyJsPlugin({
-                    parallel: true,
-                    // chunkFilter: chunk => false,
-                }),
+                new TerserPlugin(),
                 new OptimizeCSSAssetsPlugin({}),
             ],
         },
