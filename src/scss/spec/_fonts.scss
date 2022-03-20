@@ -2,8 +2,28 @@
   font-display: swap;
   font-style: normal;
   font-weight: 400;
-  font-family: "FontName";
-  src: url("fonts/FontName-Regular.woff2") format("woff2"),
-    url("fonts/FontName-Regular.ttf") format("ttf"),
-    url("fonts/FontName-Regular.woff") format("woff");
+  font-family: "Muller";
+  src: url("../fonts/MullerRegular.woff2") format("woff2"),
+    url("../fonts/MullerRegular.ttf") format("ttf"),
+    url("../fonts/MullerRegular.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Muller";
+  src: url("../fonts/MullerMedium.woff2") format("woff2"),
+    url("../fonts/MullerMedium.ttf") format("ttf"),
+    url("../fonts/MullerMedium.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Muller";
+  src: url("../fonts/MullerBold.woff2") format("woff2"),
+    url("../fonts/MullerBold.ttf") format("ttf"),
+    url("../fonts/MullerBold.woff") format("woff");
 }

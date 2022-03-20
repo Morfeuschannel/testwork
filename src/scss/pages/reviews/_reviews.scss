@@ -1,0 +1,199 @@
+.reviews {
+    &__top-bg {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 808px;
+        background: linear-gradient(0deg, #EDF6FD 0%, rgba(237, 246, 253, 0) 97.09%);
+        transform: rotate(180deg);
+    }
+
+    &__wrapper {
+        padding-top: 139px;
+    }
+
+    &__title {
+        @include h1;
+        cursor: default;
+        color: $color-main;
+    }
+
+    &__filters {
+        margin-top: 70px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__filter {
+        display: inline-block;
+        padding: 6px 24px;
+        margin: 0 10px 10px 0;
+        border: 1px solid #E5E7EB;
+        border-radius: 100px;
+        cursor: pointer;
+        @include desktop-body-regular;
+        transition: background .25s;
+
+        &:hover,
+        &.active {
+            background: #DAEFFF;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__list {
+        margin: 37px 0;
+        margin-bottom: 37px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 23px;
+
+        @include media-up(lg) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 26px 23px;
+        }
+        
+        @include media-up(xl) {
+            grid-template-columns: repeat(12, 1fr);
+        }
+    }
+
+    &__point {
+        cursor: pointer;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        padding: 0 15px 52px 25px;
+        border: 1px solid #E5E7EB;
+        border-radius: 30px 30px 30px 0;
+        background: #fff;
+        transition: box-shadow .25s;
+
+        &:hover {
+            box-shadow: 0px 4px 20px rgba(176, 176, 176, 0.25);
+            .reviews__point-overlap {
+                opacity: 0;
+            }
+        }
+
+        @include media-up(xl) {
+            &:nth-child(5n+1) {
+                grid-column: 1/5;
+            }
+            &:nth-child(5n+2) {
+                grid-column: 5/9;
+            }
+            &:nth-child(5n+3) {
+                grid-column: 9/13;
+            }
+            &:nth-child(5n+4) {
+                grid-column: 1/7;
+            }
+            &:nth-child(5n+5) {
+                grid-column: 7/13;
+            }
+        }
+
+        &-header {
+            @include mobile-body-bold;
+            color: $color-main;
+        }
+
+        &-subheader {
+            @include mobile-caption-regular;
+            color: $color-main;
+        }
+
+        &-bottom {
+            color: $color-main;
+        }
+
+        &--first {
+            display: flex;
+            flex-direction: column;
+
+            .reviews__point-top {
+                max-width: calc(100% - 90px);
+            }
+            .reviews__point-top {
+                margin-top: 39px;
+            }
+            .reviews__point-bottom {
+                margin-top: 41px;
+                @include desktop-body-regular;
+            }
+            .reviews__point-human {
+                position: absolute;
+                top: 22px;
+                right: 33px;
+                width: 60px;
+                height: 60px;
+                border-radius: 100%;
+                overflow: hidden;
+            }
+            .reviews__point-flag {
+                position: absolute;
+                top: 71px;
+                right: 24px;
+                width: 34px;
+                height: 19px;
+            }
+        }
+
+        &--second {
+            display: flex;
+            flex-direction: column-reverse;
+
+            .reviews__point-top {
+                margin-top: 85px;
+                max-width: calc(100% - 140px);
+            }
+            .reviews__point-bottom {
+                margin-top: 79px;
+                @include desktop-subheading-bold;
+            }
+            .reviews__point-human {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 166px;
+                height: 188px;
+                object-fit: cover;
+            }
+        }
+
+        &-overlap {
+            position: absolute;
+            left: 0;
+            bottom: 25px;
+            width: 100%;
+            height: 105px;
+            background: linear-gradient(180deg, #FFFFFF 9.14%, rgba(255, 255, 255, 0) 100%);
+            transform: matrix(1, 0, 0, -1, 0, 0);
+            transition: opacity .25s;
+        }
+
+        &-quote {
+            position: absolute;
+            top: 31px;
+            left: 25px;
+        }
+    }
+}
+
+.full-reviews {
+    &__point {
+        display: none;
+        padding: 0;
+        max-width: 1000px;
+        border-radius: 30px 30px 30px 0;
+
+        .reviews__point-overlap {
+            display: none;
+        }
+    }
+}

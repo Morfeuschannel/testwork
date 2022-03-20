@@ -7,3 +7,4 @@ import './scss/style.scss';
 import './js/svg-sprite';
 import './js/vh-fix';
 import './js/common';
+import './js/fancyboxes';

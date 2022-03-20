@@ -1,4 +1,0 @@
-// DOM content load
-$(() => {
-    
-})

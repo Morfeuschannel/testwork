@@ -1,1 +1,1 @@
-// import '../img/svg-sprite/icon.svg';
+import '../img/svg-sprite/quote.svg';

@@ -96,3 +96,43 @@
     }
   }
 }
+
+@mixin h1 {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 110%;
+}
+
+@mixin desktop-body-regular {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+@mixin mobile-body-bold {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 145%;
+}
+
+@mixin mobile-caption-regular {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 135%;
+}
+
+@mixin desktop-subheading-bold {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+}
