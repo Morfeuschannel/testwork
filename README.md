@@ -1,10 +1,8 @@
-# Projectname Frontend
-
-Domain: http://project.sitename.com/
+# Test work
 
 ---
 
-Requirements: node.js 12+, webpack
+Requirements: node.js 12.16.3
 
 ### Install dependencies
 
